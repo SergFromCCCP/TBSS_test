@@ -52,16 +52,17 @@
     <Compile Include="AgreementEditor.Designer.cs">
       <DependentUpon>AgreementEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillingAfterIntervalEditor.cs">
+    <Compile Include="AgreementPresenter.cs" />
+    <Compile Include="Billings\BillingAfterIntervalEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillingAfterIntervalEditor.Designer.cs">
+    <Compile Include="Billings\BillingAfterIntervalEditor.Designer.cs">
       <DependentUpon>BillingAfterIntervalEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillingEditor.cs">
+    <Compile Include="Billings\BillingEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillingEditor.Designer.cs">
+    <Compile Include="Billings\BillingEditor.Designer.cs">
       <DependentUpon>BillingEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="formAgreement.cs">
@@ -70,10 +71,10 @@
     <Compile Include="formAgreement.Designer.cs">
       <DependentUpon>formAgreement.cs</DependentUpon>
     </Compile>
-    <Compile Include="formBillings.cs">
+    <Compile Include="Billings\formBillings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formBillings.Designer.cs">
+    <Compile Include="Billings\formBillings.Designer.cs">
       <DependentUpon>formBillings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -87,16 +88,16 @@
     <EmbeddedResource Include="AgreementEditor.resx">
       <DependentUpon>AgreementEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillingAfterIntervalEditor.resx">
+    <EmbeddedResource Include="Billings\BillingAfterIntervalEditor.resx">
       <DependentUpon>BillingAfterIntervalEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillingEditor.resx">
+    <EmbeddedResource Include="Billings\BillingEditor.resx">
       <DependentUpon>BillingEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formAgreement.resx">
       <DependentUpon>formAgreement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formBillings.resx">
+    <EmbeddedResource Include="Billings\formBillings.resx">
       <DependentUpon>formBillings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

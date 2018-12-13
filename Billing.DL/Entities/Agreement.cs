@@ -13,5 +13,9 @@ namespace Billing.DL
         public Company Company { get; set; }
         public DateTime Date { get; set; }
         public string Billing { get; set; }
+        public override string ToString()
+        {
+            return $"Компания: {Company.ShortName}. Договор {Number} от {Date.ToShortDateString()}";
+        }
     }
 }

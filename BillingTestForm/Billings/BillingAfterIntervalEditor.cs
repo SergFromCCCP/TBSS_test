@@ -1,12 +1,5 @@
 ﻿using Billing.DL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BillingTestForm
@@ -17,6 +10,7 @@ namespace BillingTestForm
         public BillingAfterIntervalEditor(Dates dates)
         {
             InitializeComponent();
+
             inpBillFirst.Value = dates.BillFirst;
             inpBillLast.Value = dates.BillLast;
             inpPayFirst.Value = dates.PayFirst;

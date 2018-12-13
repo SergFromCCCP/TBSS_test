@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,17 +50,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agreement.cs" />
-    <Compile Include="Bill.cs" />
-    <Compile Include="BillAfterFixed.cs" />
-    <Compile Include="BillAfterInterval.cs" />
-    <Compile Include="BillBefore.cs" />
-    <Compile Include="BillingFactory.cs" />
-    <Compile Include="BillingType.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="Dates.cs" />
-    <Compile Include="IBilllingType.cs" />
+    <Compile Include="Entities\Agreement.cs" />
+    <Compile Include="Context\AgreementContext.cs" />
+    <Compile Include="Repositories\AgreementRepository.cs" />
+    <Compile Include="Entities\Bill.cs" />
+    <Compile Include="Billings\BillAfterFixed.cs" />
+    <Compile Include="Billings\BillAfterInterval.cs" />
+    <Compile Include="Billings\BillBefore.cs" />
+    <Compile Include="Billings\BillingFactory.cs" />
+    <Compile Include="Billings\BillingType.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Billings\Dates.cs" />
+    <Compile Include="Billings\IBilllingType.cs" />
+    <Compile Include="Repositories\CompanyRepository.cs" />
+    <Compile Include="Repositories\IAgreementRepository.cs" />
+    <Compile Include="Repositories\ICompanyRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

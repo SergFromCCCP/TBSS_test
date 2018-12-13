@@ -25,6 +25,7 @@ namespace BillingTestForm
 
         private void btnTestAgreement_Click(object sender, EventArgs e)
         {
+
             var f = new formAgreement();
             f.ShowDialog();
         }

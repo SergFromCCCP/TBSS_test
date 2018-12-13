@@ -25,7 +25,7 @@ namespace Billing.DL
 
         public override string ToString()
         {
-            return "BillBefore";
+            return GetConstructor();
         }
     }
 }

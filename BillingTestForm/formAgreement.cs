@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Billing.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace BillingTestForm
 {
     public partial class formAgreement : Form
     {
-        private Billing.DL.IBillingType currentBilling = Billing.DL.BillingFactory.GetBillingType("AF 5 false");
+        private UnitOfWork uof = new UnitOfWork(new AgreementContext());
 
         public formAgreement()
         {
@@ -21,16 +22,36 @@ namespace BillingTestForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var f = new BillingEditor(currentBilling.GetConstructor());
-            f.ShowDialog();
-            if (f.DialogResult != DialogResult.OK) return;
-            currentBilling = Billing.DL.BillingFactory.GetBillingType(f.GetBilling());
-            Text = currentBilling.ToString();
         }
 
         private void formAgreement_Load(object sender, EventArgs e)
         {
+            listCompanies.DataSource = uof.Companies.GetAll();
+            listCompanies.DisplayMember = "ShortName";
+            listCompanies.ValueMember = "CompanyID";
+        }
 
+        public void UpdateView()
+        {
+            string selectedCompanyName = listCompanies.SelectedItem.ToString();
+            listAgreements.DataSource = uof.Agreements.GetAgreementsByCompanyName(selectedCompanyName);
+        }
+
+        public int SelectedId
+        {
+            get
+            {
+                if (listAgreements.SelectedItems.Count == 0) return -1;
+                return ((Agreement)listAgreements.SelectedItem).Id;
+            }
+            set
+            {
+            }
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //Agreements.Add(f.Agreement);
+            //UpdateView(Agreements);
         }
     }
 }

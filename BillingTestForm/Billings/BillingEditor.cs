@@ -14,6 +14,12 @@ namespace BillingTestForm
     {
         private List<Billing.DL.Dates> dates = new List<Billing.DL.Dates>();
         private Billing.DL.IBillingType billing;
+        public BillingEditor(string billingConstructor = "BF")
+        {
+            InitializeComponent();
+            billing = Billing.DL.BillingFactory.GetBillingType(billingConstructor);
+        }
+
         public string GetBilling()
         {
             if (rbAfterFixed.Checked)
@@ -22,13 +28,7 @@ namespace BillingTestForm
             {
                 return "AI " + string.Join(" ", dates);
             }
-            return "";
-        }
-
-        public BillingEditor(string billingConstructor = "")
-        {
-            InitializeComponent();
-            billing = Billing.DL.BillingFactory.GetBillingType(billingConstructor);
+            return "BF";
         }
 
         private void BillingEditor_Load(object sender, EventArgs e)

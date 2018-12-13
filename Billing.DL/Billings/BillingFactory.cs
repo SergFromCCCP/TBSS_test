@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Billing.DL
 {
-  public static  class BillingFactory
+    public static class BillingFactory
     {
         public enum BillingTypeEnum
         {
-            BF=0,//billing before
+            BF = 0,//billing before
             AF,//billing after fixed
             AI//billing after interval
         }
 
-        public static IBillingType GetBillingType(string constructor)
+        public static IBillingType GetBillingType(string constructor = "BF")
         {
             constructor = constructor.Trim();
-            if (constructor == null || constructor == "")
+            if (constructor.StartsWith(BillingTypeEnum.BF.ToString()))
                 return new BillBefore();
             if (constructor.StartsWith(BillingTypeEnum.AF.ToString()))
                 return new BillAfterFixed(constructor);
