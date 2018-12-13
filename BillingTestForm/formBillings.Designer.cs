@@ -1,6 +1,6 @@
 ﻿namespace BillingTestForm
 {
-    partial class Form1
+    partial class formBillings
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -67,7 +67,7 @@
             this.dtp.Size = new System.Drawing.Size(159, 20);
             this.dtp.TabIndex = 3;
             // 
-            // Form1
+            // formBillings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,7 +76,8 @@
             this.Controls.Add(this.result);
             this.Controls.Add(this.constructor);
             this.Controls.Add(this.GO);
-            this.Name = "Form1";
+            this.Name = "formBillings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

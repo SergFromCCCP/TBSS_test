@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Billing.DL
 {
-   public class Bill
+    public class Bill
     {
         public int Id { get; set; }
         public Company Company { get; set; }
         public DateTime Date { get; set; }
         public string Number { get; set; }
-        public decimal Amount { get; set;
- }
+        public decimal Amount
+        {
+            get; set;
+        }
     }
 }

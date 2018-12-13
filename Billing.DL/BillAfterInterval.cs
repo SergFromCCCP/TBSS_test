@@ -4,20 +4,8 @@ using System.Linq;
 
 namespace Billing.DL
 {
-    internal class BillAfterInterval : IBilllingType
+    public class BillAfterInterval : IBillingType
     {
-        private struct Dates
-        {
-            internal int BillFirst;
-            internal int BillLast;
-            internal int PayFirst;
-            internal int PayLast;
-
-            public override string ToString()
-            {
-                return $"{BillFirst} {BillLast} {PayFirst} {PayLast}";
-            }
-        }
 
         private string Id = BillingFactory.BillingTypeEnum.AI.ToString();
         private List<Dates> dates;
@@ -40,7 +28,7 @@ namespace Billing.DL
 
         public override string ToString()
         {
-            return Id + " " + string.Join(" ", dates.Select(d => d.ToString()));
+            return GetConstructor();
         }
         public DateTime GetFirstDate(Bill bill)
         {
@@ -71,6 +59,11 @@ namespace Billing.DL
             if (min < max)
                 return (value >= min) && (value <= max);
             return (value >= min) || (value <= max);
+        }
+
+        public string GetConstructor()
+        {
+            return Id + " " + string.Join(" ", dates.Select(d => d.ToString()));
         }
     }
 }

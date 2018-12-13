@@ -8,7 +8,7 @@ namespace Billing.Tests
     public class BillingTests
     {
         private Bill bill;
-        private IBilllingType billingType;
+        private IBillingType billingType;
 
         [TestInitialize]
         public void TestInit()

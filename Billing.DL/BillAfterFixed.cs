@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Billing.DL
 {
-    public class BillAfterFixed : IBilllingType
+    public class BillAfterFixed : IBillingType
     {
         private string Id = BillingFactory.BillingTypeEnum.AF.ToString();
         private int DaysForPayment;
@@ -33,7 +33,7 @@ namespace Billing.DL
 
         public override string ToString()
         {
-            return "BillAfterFixed" + string.Join(" ", new[] { Id, DaysForPayment.ToString(), OnlyWorkDays.ToString() });// (OnlyWorkDays ? "1" : "0");
+            return GetConstructor();
         }
 
         public DateTime GetFirstDate(Bill bill)
@@ -77,6 +77,11 @@ namespace Billing.DL
                                             new DateTime(2018,05,09)
                             };
             return holidays.Contains(date.Date);
+        }
+
+        public string GetConstructor()
+        {
+            return string.Join(" ", new[] { Id, DaysForPayment.ToString(), OnlyWorkDays.ToString() });
         }
     }
 }

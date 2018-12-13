@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BillingTestForm
 {
-    public partial class Form1 : Form
+    public partial class formBillings : Form
     {
-        public Form1()
+        public formBillings()
         {
             InitializeComponent();
             result.Text = string.Join(" ", Enum.GetValues(typeof(BillingFactory.BillingTypeEnum)));

@@ -49,6 +49,7 @@
     <Compile Include="BillingFactory.cs" />
     <Compile Include="BillingType.cs" />
     <Compile Include="Company.cs" />
+    <Compile Include="Dates.cs" />
     <Compile Include="IBilllingType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

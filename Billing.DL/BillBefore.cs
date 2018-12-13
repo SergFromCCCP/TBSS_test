@@ -2,10 +2,15 @@
 
 namespace Billing.DL
 {
-    public class BillBefore : IBilllingType
+    public class BillBefore : IBillingType
     {
         public BillBefore()
         {
+        }
+
+        public string GetConstructor()
+        {
+            return "";
         }
 
         public DateTime GetFirstDate(Bill bill)

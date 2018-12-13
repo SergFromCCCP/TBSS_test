@@ -46,16 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AgreementEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AgreementEditor.Designer.cs">
+      <DependentUpon>AgreementEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillingAfterIntervalEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingAfterIntervalEditor.Designer.cs">
+      <DependentUpon>BillingAfterIntervalEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillingEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingEditor.Designer.cs">
+      <DependentUpon>BillingEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAgreement.Designer.cs">
+      <DependentUpon>formAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBillings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBillings.Designer.cs">
+      <DependentUpon>formBillings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgreementEditor.resx">
+      <DependentUpon>AgreementEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingAfterIntervalEditor.resx">
+      <DependentUpon>BillingAfterIntervalEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingEditor.resx">
+      <DependentUpon>BillingEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAgreement.resx">
+      <DependentUpon>formAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBillings.resx">
+      <DependentUpon>formBillings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +108,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Billing.DL.Agreement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

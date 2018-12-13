@@ -15,7 +15,7 @@ namespace Billing.DL
             AI//billing after interval
         }
 
-        public static IBilllingType GetBillingType(string constructor)
+        public static IBillingType GetBillingType(string constructor)
         {
             constructor = constructor.Trim();
             if (constructor == null || constructor == "")
