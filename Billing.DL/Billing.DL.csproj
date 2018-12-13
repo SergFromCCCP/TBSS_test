@@ -44,7 +44,9 @@
     <Compile Include="Agreement.cs" />
     <Compile Include="Bill.cs" />
     <Compile Include="BillAfterFixed.cs" />
+    <Compile Include="BillAfterInterval.cs" />
     <Compile Include="BillBefore.cs" />
+    <Compile Include="BillingFactory.cs" />
     <Compile Include="BillingType.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="IBilllingType.cs" />

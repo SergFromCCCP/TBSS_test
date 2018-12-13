@@ -5,6 +5,7 @@ namespace Billing.DL
 {
     public class BillAfterFixed : IBilllingType
     {
+        private string Id = BillingFactory.BillingTypeEnum.AF.ToString();
         private int DaysForPayment;
         private bool OnlyWorkDays;
 
@@ -12,6 +13,27 @@ namespace Billing.DL
         {
             DaysForPayment = daysForPayment;
             OnlyWorkDays = onlyWorkDays;
+        }
+
+        public BillAfterFixed(string constructor)
+        {
+            if (!constructor.StartsWith(Id))
+                throw new ArgumentException();
+            try
+            {
+                var c = constructor.Trim().Split();
+                DaysForPayment = int.Parse(c[1]);
+                OnlyWorkDays = bool.Parse(c[2]);
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+        }
+
+        public override string ToString()
+        {
+            return "BillAfterFixed" + string.Join(" ", new[] { Id, DaysForPayment.ToString(), OnlyWorkDays.ToString() });// (OnlyWorkDays ? "1" : "0");
         }
 
         public DateTime GetFirstDate(Bill bill)
