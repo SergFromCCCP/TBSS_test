@@ -69,7 +69,7 @@
             0});
             this.inpBillFirst.Name = "inpBillFirst";
             this.inpBillFirst.Size = new System.Drawing.Size(55, 20);
-            this.inpBillFirst.TabIndex = 1;
+            this.inpBillFirst.TabIndex = 0;
             this.inpBillFirst.Value = new decimal(new int[] {
             1,
             0,
@@ -103,7 +103,7 @@
             this.inpBillLast.Size = new System.Drawing.Size(55, 20);
             this.inpBillLast.TabIndex = 1;
             this.inpBillLast.Value = new decimal(new int[] {
-            1,
+            31,
             0,
             0,
             0});
@@ -133,7 +133,7 @@
             0});
             this.inpPayFirst.Name = "inpPayFirst";
             this.inpPayFirst.Size = new System.Drawing.Size(55, 20);
-            this.inpPayFirst.TabIndex = 1;
+            this.inpPayFirst.TabIndex = 2;
             this.inpPayFirst.Value = new decimal(new int[] {
             1,
             0,
@@ -165,9 +165,9 @@
             0});
             this.inpPayLast.Name = "inpPayLast";
             this.inpPayLast.Size = new System.Drawing.Size(55, 20);
-            this.inpPayLast.TabIndex = 1;
+            this.inpPayLast.TabIndex = 3;
             this.inpPayLast.Value = new decimal(new int[] {
-            1,
+            31,
             0,
             0,
             0});
@@ -178,7 +178,7 @@
             this.btnOK.Location = new System.Drawing.Point(47, 98);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 2;
+            this.btnOK.TabIndex = 4;
             this.btnOK.Text = "Сохранить";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -189,7 +189,7 @@
             this.btnCancel.Location = new System.Drawing.Point(195, 98);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Отменить";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
