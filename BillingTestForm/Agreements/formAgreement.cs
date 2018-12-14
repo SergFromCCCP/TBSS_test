@@ -23,8 +23,7 @@ namespace BillingTestForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var f = new BillingEditor("BF");
-            f.ShowDialog();
+            Close();
         }
 
         private void formAgreement_Load(object sender, EventArgs e)
@@ -82,7 +81,7 @@ namespace BillingTestForm
             uof.Agreements.Modify(agr);
             uof.Complete();
             UpdateAgreements(company);
-
+            listBills_SelectedIndexChanged(sender, e);
         }
 
         private void UpdateAgreements(Company company)
@@ -110,7 +109,7 @@ namespace BillingTestForm
             var agr = (Agreement)listAgreements.SelectedItem;
             if (agr == null) return;
 
-            lblBilling.Text = agr.Billing;
+            lblBilling.Text ="Конструктор формы оплаты:\n"+ agr.Billing;
         }
 
         private void listBills_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,5 +125,12 @@ namespace BillingTestForm
                 " по " + currentBilling.GetLastDate(bill.Date).ToShortDateString();
         }
 
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            var agr = (Agreement)listAgreements.SelectedItem;
+            uof.Agreements.Remove(agr);
+            uof.Complete();
+            UpdateAgreements((Company)listCompanies.SelectedItem);
+        }
     }
 }

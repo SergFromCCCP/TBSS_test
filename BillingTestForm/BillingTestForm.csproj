@@ -53,13 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgreementEditor.cs">
+    <Compile Include="Agreements\AgreementEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgreementEditor.Designer.cs">
+    <Compile Include="Agreements\AgreementEditor.Designer.cs">
       <DependentUpon>AgreementEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgreementPresenter.cs" />
     <Compile Include="Billings\BillingAfterIntervalEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +71,11 @@
     <Compile Include="Billings\BillingEditor.Designer.cs">
       <DependentUpon>BillingEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAgreement.cs">
+    <Compile Include="Agreements\formAgreement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAgreement.Designer.cs">
+    <Compile Include="Agreements\formAgreement.Designer.cs">
       <DependentUpon>formAgreement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Billings\formBillings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Billings\formBillings.Designer.cs">
-      <DependentUpon>formBillings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,7 +85,7 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AgreementEditor.resx">
+    <EmbeddedResource Include="Agreements\AgreementEditor.resx">
       <DependentUpon>AgreementEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Billings\BillingAfterIntervalEditor.resx">
@@ -101,11 +94,8 @@
     <EmbeddedResource Include="Billings\BillingEditor.resx">
       <DependentUpon>BillingEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formAgreement.resx">
+    <EmbeddedResource Include="Agreements\formAgreement.resx">
       <DependentUpon>formAgreement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Billings\formBillings.resx">
-      <DependentUpon>formBillings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

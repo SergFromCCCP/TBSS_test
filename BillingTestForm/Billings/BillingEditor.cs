@@ -15,12 +15,17 @@ namespace BillingTestForm
         private List<Billing.DL.Dates> dates = new List<Billing.DL.Dates>();
         private Billing.DL.IBillingType billing;
         private bool IsTesting = false;
+        private bool IsFormLoad = false;
 
         public BillingEditor(string billingConstructor = "BF", bool isTesting = false)
         {
             InitializeComponent();
             billing = Billing.DL.BillingFactory.GetBillingType(billingConstructor);
             IsTesting = isTesting;
+            if (isTesting)
+                Width = gbTesting.Left + gbTesting.Width + panel1.Left;
+            else
+                Width = gbTesting.Left;
         }
 
         public string GetBilling()
@@ -57,6 +62,10 @@ namespace BillingTestForm
                 }
                 RefreshList();
             }
+            IsFormLoad = true;
+            gbTesting.Visible = IsTesting;
+            gbAfterInterval.Location = gbAfterFixed.Location;
+            UpdateForm(sender, e);
         }
 
         private void RefreshList()
@@ -107,10 +116,7 @@ namespace BillingTestForm
 
         private void UpdateForm(object sender, EventArgs e)
         {
-            gbTesting.Visible = IsTesting;
-
-            gbAfterInterval.Location = gbAfterFixed.Location;
-
+            if (!IsFormLoad) return;
             bool isBefore = rbBefore.Checked;
             bool isAfterFixed = rbAfterFixed.Checked;
             bool isAfterInterval = rbAfterInterval.Checked;

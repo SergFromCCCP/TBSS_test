@@ -35,9 +35,9 @@
             // 
             // btnTestBillings
             // 
-            this.btnTestBillings.Location = new System.Drawing.Point(175, 21);
+            this.btnTestBillings.Location = new System.Drawing.Point(12, 12);
             this.btnTestBillings.Name = "btnTestBillings";
-            this.btnTestBillings.Size = new System.Drawing.Size(168, 54);
+            this.btnTestBillings.Size = new System.Drawing.Size(315, 64);
             this.btnTestBillings.TabIndex = 0;
             this.btnTestBillings.Text = "Тестирование видов оплаты";
             this.btnTestBillings.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // btnTestAgreement
             // 
-            this.btnTestAgreement.Location = new System.Drawing.Point(175, 81);
+            this.btnTestAgreement.Location = new System.Drawing.Point(12, 82);
             this.btnTestAgreement.Name = "btnTestAgreement";
-            this.btnTestAgreement.Size = new System.Drawing.Size(168, 52);
+            this.btnTestAgreement.Size = new System.Drawing.Size(315, 52);
             this.btnTestAgreement.TabIndex = 0;
             this.btnTestAgreement.Text = "Договора";
             this.btnTestAgreement.UseVisualStyleBackColor = true;
@@ -55,11 +55,11 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(713, 415);
+            this.btnClose.Location = new System.Drawing.Point(252, 164);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -67,12 +67,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(343, 208);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnTestAgreement);
             this.Controls.Add(this.btnTestBillings);
             this.Name = "StartForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartForm";
             this.ResumeLayout(false);
 

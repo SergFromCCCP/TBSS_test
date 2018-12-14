@@ -145,21 +145,21 @@
             // 
             // btnRemoveInterval
             // 
-            this.btnRemoveInterval.Location = new System.Drawing.Point(179, 133);
+            this.btnRemoveInterval.Location = new System.Drawing.Point(198, 133);
             this.btnRemoveInterval.Name = "btnRemoveInterval";
             this.btnRemoveInterval.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveInterval.TabIndex = 1;
-            this.btnRemoveInterval.Text = "Delete";
+            this.btnRemoveInterval.Text = "Удалить";
             this.btnRemoveInterval.UseVisualStyleBackColor = true;
             this.btnRemoveInterval.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnEditInterval
             // 
-            this.btnEditInterval.Location = new System.Drawing.Point(98, 133);
+            this.btnEditInterval.Location = new System.Drawing.Point(107, 133);
             this.btnEditInterval.Name = "btnEditInterval";
             this.btnEditInterval.Size = new System.Drawing.Size(75, 23);
             this.btnEditInterval.TabIndex = 1;
-            this.btnEditInterval.Text = "Edit";
+            this.btnEditInterval.Text = "Изменить";
             this.btnEditInterval.UseVisualStyleBackColor = true;
             this.btnEditInterval.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -169,7 +169,7 @@
             this.btnAddInterval.Name = "btnAddInterval";
             this.btnAddInterval.Size = new System.Drawing.Size(75, 23);
             this.btnAddInterval.TabIndex = 1;
-            this.btnAddInterval.Text = "Add";
+            this.btnAddInterval.Text = "Добавить";
             this.btnAddInterval.UseVisualStyleBackColor = true;
             this.btnAddInterval.Click += new System.EventHandler(this.btnAddInterval_Click);
             // 
@@ -187,15 +187,16 @@
             this.panel1.Controls.Add(this.rbBefore);
             this.panel1.Controls.Add(this.rbAfterFixed);
             this.panel1.Controls.Add(this.rbAfterInterval);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 84);
+            this.panel1.Size = new System.Drawing.Size(183, 84);
             this.panel1.TabIndex = 0;
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(122, 288);
+            this.btnOK.Location = new System.Drawing.Point(397, 282);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 4;
@@ -204,8 +205,9 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(225, 288);
+            this.btnCancel.Location = new System.Drawing.Point(500, 282);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
@@ -245,9 +247,9 @@
             this.gbTesting.Controls.Add(this.dtp);
             this.gbTesting.Controls.Add(this.label3);
             this.gbTesting.Controls.Add(this.ResultLabel);
-            this.gbTesting.Location = new System.Drawing.Point(319, 12);
+            this.gbTesting.Location = new System.Drawing.Point(315, 12);
             this.gbTesting.Name = "gbTesting";
-            this.gbTesting.Size = new System.Drawing.Size(299, 255);
+            this.gbTesting.Size = new System.Drawing.Size(260, 255);
             this.gbTesting.TabIndex = 3;
             this.gbTesting.TabStop = false;
             this.gbTesting.Text = "Тестирование:";
@@ -259,13 +261,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(645, 329);
+            this.ClientSize = new System.Drawing.Size(587, 318);
             this.Controls.Add(this.gbTesting);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.gbAfterInterval);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbAfterFixed);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BillingEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Редактор оплаты";

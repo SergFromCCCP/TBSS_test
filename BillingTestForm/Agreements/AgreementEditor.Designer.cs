@@ -93,7 +93,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(295, 151);
+            this.btnCancel.Location = new System.Drawing.Point(295, 120);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 9;
@@ -103,7 +103,7 @@
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(192, 151);
+            this.btnOK.Location = new System.Drawing.Point(192, 120);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 10;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 194);
+            this.ClientSize = new System.Drawing.Size(388, 157);
             this.Controls.Add(this.btnSetBilling);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -135,6 +135,7 @@
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(numberLabel);
             this.Controls.Add(this.txtNumber);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AgreementEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.AgreementEditor_Load);
