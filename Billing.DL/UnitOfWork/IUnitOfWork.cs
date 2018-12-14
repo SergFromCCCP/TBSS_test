@@ -10,6 +10,7 @@ namespace Billing.DL
     {
         IAgreementRepository Agreements { get; }
         ICompanyRepository Companies { get; }
+        IBillRepository Bills { get; }
         int Complete();
     }
 }

@@ -8,6 +8,7 @@ namespace Billing.DL
 {
     public class Company
     {
+        public int Id { get; set; }
         public int CompanyID { get; set; }
         public string ShortName { get; set; }
         public string INN { get; set; }

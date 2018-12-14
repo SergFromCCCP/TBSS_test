@@ -15,9 +15,9 @@ namespace Billing.DL
         {
         }
         
-        public IEnumerable<Agreement> GetAgreementsByCompanyName(string companyName)
-        {
-            return AgreementContext.Agreements.Where(a => a.Company.ShortName == companyName);
-        }
+        //public IEnumerable<Agreement> GetAgreementsByCompanyName(string companyName)
+        //{
+        //    return AgreementContext.Agreements.Where(a => a.Company.ShortName == companyName);
+        //}
     }
 }

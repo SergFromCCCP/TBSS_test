@@ -22,20 +22,20 @@ namespace BillingTestForm
 
         public void Add()
         {
-            var f = new AgreementEditor(
-                new Agreement()
-                {
-                    Billing = "",
-                    Date = DateTime.Now,
-                    Number = "0",
-                    Company = new Company { CompanyID = 1, INN = "111", ShortName = "aaa" }
-                }
-                );
-            f.ShowDialog();
-            if (f.DialogResult != DialogResult.OK) return;
-            uof.Agreements.Add(f.Agreement);
-            uof.Complete();
-            _view.UpdateView();
+            //var f = new AgreementEditor(
+            //    new Agreement()
+            //    {
+            //        Billing = "",
+            //        Date = DateTime.Now,
+            //        Number = "0",
+            //        Company = new Company { CompanyID = 1, INN = "111", ShortName = "aaa" }
+            //    }
+            //    );
+            //f.ShowDialog();
+            //if (f.DialogResult != DialogResult.OK) return;
+            //uof.Agreements.Add(f.Agreement);
+            //uof.Complete();
+            //_view.UpdateView();
         }
     }
 }

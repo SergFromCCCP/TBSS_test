@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Billing.DL
 {
-    public interface IAgreementRepository : IRepository<Agreement>
+    public interface IBillRepository : IRepository<Bill>
     {
-        //IEnumerable<Agreement> GetAgreementsByCompanyName(string companyName);
     }
 }

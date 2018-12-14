@@ -14,11 +14,14 @@ namespace Billing.DL
             this.context = context;
             Agreements = new AgreementRepository(context);
             Companies = new CompanyRepository(context);
+            Bills = new BillRepository(context);
         }
 
         public IAgreementRepository Agreements { get; private set; }
 
         public ICompanyRepository Companies { get; private set; }
+
+        public IBillRepository Bills { get; private set; }
 
         public int Complete()
         {

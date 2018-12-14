@@ -30,7 +30,7 @@ namespace BillingTestForm
 
         private void WriteToForm()
         {
-            Text = "Редактор договора с " + Agreement.Company.ShortName;
+            Text = "Редактор договора с ";// + Agreement.Company.ShortName;
             dtpDate.Value = Agreement.Date;
             txtNumber.Text = Agreement.Number;
             txtBilling.Text = Agreement.Billing;

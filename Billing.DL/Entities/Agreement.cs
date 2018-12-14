@@ -10,12 +10,12 @@ namespace Billing.DL
     {
         public int Id { get; set; }
         public string Number { get; set; }
-        public Company Company { get; set; }
+        public int CompanyId { get; set; }
         public DateTime Date { get; set; }
         public string Billing { get; set; }
         public override string ToString()
         {
-            return $"Компания: {Company.ShortName}. Договор {Number} от {Date.ToShortDateString()}";
+            return $"Договор {Number} от {Date.ToShortDateString()}";
         }
     }
 }

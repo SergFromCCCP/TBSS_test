@@ -62,8 +62,10 @@
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Billings\Dates.cs" />
     <Compile Include="Billings\IBilllingType.cs" />
+    <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\CompanyRepository.cs" />
     <Compile Include="Repositories\IAgreementRepository.cs" />
+    <Compile Include="Repositories\IBillRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
