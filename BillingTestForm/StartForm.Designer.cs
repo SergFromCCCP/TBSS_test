@@ -49,12 +49,13 @@
             this.btnTestAgreement.Name = "btnTestAgreement";
             this.btnTestAgreement.Size = new System.Drawing.Size(315, 52);
             this.btnTestAgreement.TabIndex = 0;
-            this.btnTestAgreement.Text = "Договора";
+            this.btnTestAgreement.Text = "Договоры";
             this.btnTestAgreement.UseVisualStyleBackColor = true;
             this.btnTestAgreement.Click += new System.EventHandler(this.btnTestAgreement_Click);
             // 
             // btnClose
             // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(252, 164);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
