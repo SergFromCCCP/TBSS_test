@@ -39,7 +39,7 @@
             this.btnTestBillings.Name = "btnTestBillings";
             this.btnTestBillings.Size = new System.Drawing.Size(168, 54);
             this.btnTestBillings.TabIndex = 0;
-            this.btnTestBillings.Text = "Виды оплаты";
+            this.btnTestBillings.Text = "Тестирование видов оплаты";
             this.btnTestBillings.UseVisualStyleBackColor = true;
             this.btnTestBillings.Click += new System.EventHandler(this.btnTestBillings_Click);
             // 
