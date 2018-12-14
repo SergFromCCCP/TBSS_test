@@ -43,10 +43,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbTesting = new System.Windows.Forms.GroupBox();
             this.gbAfterFixed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFixedDays)).BeginInit();
             this.gbAfterInterval.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.gbTesting.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbBefore
@@ -59,7 +64,7 @@
             this.rbBefore.TabStop = true;
             this.rbBefore.Text = "Предоплата";
             this.rbBefore.UseVisualStyleBackColor = true;
-            this.rbBefore.CheckedChanged += new System.EventHandler(this.rbBefore_CheckedChanged);
+            this.rbBefore.CheckedChanged += new System.EventHandler(this.UpdateForm);
             // 
             // rbAfterFixed
             // 
@@ -71,7 +76,7 @@
             this.rbAfterFixed.TabStop = true;
             this.rbAfterFixed.Text = "Постоплата фиксированная";
             this.rbAfterFixed.UseVisualStyleBackColor = true;
-            this.rbAfterFixed.CheckedChanged += new System.EventHandler(this.rbBefore_CheckedChanged);
+            this.rbAfterFixed.CheckedChanged += new System.EventHandler(this.UpdateForm);
             // 
             // rbAfterInterval
             // 
@@ -83,7 +88,7 @@
             this.rbAfterInterval.TabStop = true;
             this.rbAfterInterval.Text = "Постоплата интервальная";
             this.rbAfterInterval.UseVisualStyleBackColor = true;
-            this.rbAfterInterval.CheckedChanged += new System.EventHandler(this.rbBefore_CheckedChanged);
+            this.rbAfterInterval.CheckedChanged += new System.EventHandler(this.UpdateForm);
             // 
             // gbAfterFixed
             // 
@@ -93,7 +98,7 @@
             this.gbAfterFixed.Location = new System.Drawing.Point(12, 102);
             this.gbAfterFixed.Name = "gbAfterFixed";
             this.gbAfterFixed.Size = new System.Drawing.Size(231, 72);
-            this.gbAfterFixed.TabIndex = 3;
+            this.gbAfterFixed.TabIndex = 1;
             this.gbAfterFixed.TabStop = false;
             this.gbAfterFixed.Text = "Фиксированная";
             // 
@@ -106,6 +111,7 @@
             this.checkOnlyWorkDays.TabIndex = 0;
             this.checkOnlyWorkDays.Text = "Только рабочие дни";
             this.checkOnlyWorkDays.UseVisualStyleBackColor = true;
+            this.checkOnlyWorkDays.CheckedChanged += new System.EventHandler(this.UpdateForm);
             // 
             // label1
             // 
@@ -121,7 +127,8 @@
             this.numFixedDays.Location = new System.Drawing.Point(149, 37);
             this.numFixedDays.Name = "numFixedDays";
             this.numFixedDays.Size = new System.Drawing.Size(58, 20);
-            this.numFixedDays.TabIndex = 0;
+            this.numFixedDays.TabIndex = 1;
+            this.numFixedDays.ValueChanged += new System.EventHandler(this.UpdateForm);
             // 
             // gbAfterInterval
             // 
@@ -132,7 +139,7 @@
             this.gbAfterInterval.Location = new System.Drawing.Point(12, 102);
             this.gbAfterInterval.Name = "gbAfterInterval";
             this.gbAfterInterval.Size = new System.Drawing.Size(288, 165);
-            this.gbAfterInterval.TabIndex = 0;
+            this.gbAfterInterval.TabIndex = 2;
             this.gbAfterInterval.TabStop = false;
             this.gbAfterInterval.Text = "Интервальная";
             // 
@@ -183,7 +190,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 84);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 0;
             // 
             // btnOK
             // 
@@ -191,7 +198,7 @@
             this.btnOK.Location = new System.Drawing.Point(122, 288);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 5;
+            this.btnOK.TabIndex = 4;
             this.btnOK.Text = "Сохранить";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
@@ -205,17 +212,59 @@
             this.btnCancel.Text = "Отменить";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // dtp
+            // 
+            this.dtp.Location = new System.Drawing.Point(86, 19);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(137, 20);
+            this.dtp.TabIndex = 6;
+            this.dtp.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(13, 50);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(35, 13);
+            this.ResultLabel.TabIndex = 7;
+            this.ResultLabel.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Дата счета:";
+            // 
+            // gbTesting
+            // 
+            this.gbTesting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbTesting.Controls.Add(this.dtp);
+            this.gbTesting.Controls.Add(this.label3);
+            this.gbTesting.Controls.Add(this.ResultLabel);
+            this.gbTesting.Location = new System.Drawing.Point(319, 12);
+            this.gbTesting.Name = "gbTesting";
+            this.gbTesting.Size = new System.Drawing.Size(299, 255);
+            this.gbTesting.TabIndex = 3;
+            this.gbTesting.TabStop = false;
+            this.gbTesting.Text = "Тестирование:";
+            this.gbTesting.Visible = false;
+            // 
             // BillingEditor
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(334, 329);
+            this.ClientSize = new System.Drawing.Size(645, 329);
+            this.Controls.Add(this.gbTesting);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbAfterInterval);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbAfterFixed);
             this.Name = "BillingEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -227,6 +276,8 @@
             this.gbAfterInterval.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gbTesting.ResumeLayout(false);
+            this.gbTesting.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +300,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker dtp;
+        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbTesting;
     }
 }

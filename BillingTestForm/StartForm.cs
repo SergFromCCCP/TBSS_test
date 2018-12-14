@@ -19,13 +19,12 @@ namespace BillingTestForm
 
         private void btnTestBillings_Click(object sender, EventArgs e)
         {
-            var f = new formBillings();
+            var f = new BillingEditor("BF", true);
             f.ShowDialog();
         }
 
         private void btnTestAgreement_Click(object sender, EventArgs e)
         {
-
             var f = new formAgreement();
             f.ShowDialog();
         }
