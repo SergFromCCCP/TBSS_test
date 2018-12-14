@@ -4,8 +4,8 @@ namespace Billing.DL
 {
     public interface IBillingType
     {
-        DateTime GetFirstDate(Bill bill);
-        DateTime GetLastDate(Bill bill);
+        DateTime GetFirstDate(DateTime billDate);
+        DateTime GetLastDate(DateTime billDate);
         string GetConstructor();
     }
 }

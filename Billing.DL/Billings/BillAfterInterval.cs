@@ -30,17 +30,17 @@ namespace Billing.DL
         {
             return GetConstructor();
         }
-        public DateTime GetFirstDate(Bill bill)
+        public DateTime GetFirstDate(DateTime billDate)
         {
-            Dates d1 = GetDatesForBill(bill.Date);
-            var result = GetFirstDatOfNextMonth(bill.Date);
+            Dates d1 = GetDatesForBill(billDate);
+            var result = GetFirstDatOfNextMonth(billDate);
             return new DateTime(result.Year, result.Month, d1.PayFirst);
         }
 
-        public DateTime GetLastDate(Bill bill)
+        public DateTime GetLastDate(DateTime billDate)
         {
-            Dates d1 = GetDatesForBill(bill.Date);
-            var result = GetFirstDatOfNextMonth(bill.Date);
+            Dates d1 = GetDatesForBill(billDate);
+            var result = GetFirstDatOfNextMonth(billDate);
             return new DateTime(result.Year, result.Month, d1.PayLast);
         }
 

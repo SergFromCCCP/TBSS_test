@@ -122,8 +122,8 @@ namespace BillingTestForm
             var currentBilling = BillingFactory.GetBillingType(lastAgreement.Billing);
 
             var bill = ((Bill)listBills.SelectedItem);
-            result.Text = "Оплата с " + currentBilling.GetFirstDate(bill).ToShortDateString() +
-                " по " + currentBilling.GetLastDate(bill).ToShortDateString();
+            result.Text = "Оплата с " + currentBilling.GetFirstDate(bill.Date).ToShortDateString() +
+                " по " + currentBilling.GetLastDate(bill.Date).ToShortDateString();
         }
 
     }

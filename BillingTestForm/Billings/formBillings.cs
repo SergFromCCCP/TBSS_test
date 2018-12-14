@@ -26,8 +26,8 @@ namespace BillingTestForm
                 var b = new Bill() { Date=dtp.Value};
                 var bb = BillingFactory.GetBillingType(constructor.Text);
                 result.Text = bb.ToString() + 
-                    "\nFirstDate: " + bb.GetFirstDate(b).ToShortDateString() + 
-                    "\nLastDate: " + bb.GetLastDate(b).ToShortDateString();
+                    "\nFirstDate: " + bb.GetFirstDate(b.Date).ToShortDateString() + 
+                    "\nLastDate: " + bb.GetLastDate(b.Date).ToShortDateString();
             }
             catch (Exception ex)
             {

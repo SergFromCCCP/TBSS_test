@@ -13,14 +13,14 @@ namespace Billing.DL
             return "";
         }
 
-        public DateTime GetFirstDate(Bill bill)
+        public DateTime GetFirstDate(DateTime billDate)
         {
-            return bill.Date;
+            return billDate;
         }
 
-        public DateTime GetLastDate(Bill bill)
+        public DateTime GetLastDate(DateTime billDate)
         {
-            return bill.Date;
+            return billDate;
         }
 
         public override string ToString()
